@@ -70,12 +70,35 @@ vehiculos = [
 
 # Funciones
 def catalogar(lista):
+    contador = 0 # Establecemos un contador
+    for v in vehiculos: 
+        contador += 1 # Incrementamos el contador
+    print(f"Se han encontrado {contador} vehiculos:\n")
+    print("============================================")
+        
     for v in lista:
         print("{} {}".format( type(v).__name__, v))
 # Inicializamos la funcion
 
-catalogar(vehiculos)
 
-def catalogar():
-    pass 
 
+def catalogar_filter(lista, ruedas=None):
+    
+    if ruedas != None:
+        contador = 0
+        for v in vehiculos:
+            if v.ruedas == ruedas:
+                contador += 1
+        print(f"Se han encontrado {contador} vehiculos con {ruedas} ruedas:")
+    for v in lista:
+        if ruedas == None:# Vamos  a copmprobar si ruedas es igual a None, significa que no hemos pasado el filtro por lo tanto vamos a mostrar todos los elementos de la lista
+            print("{} {}".format( type(v).__name__, v))
+        elif v.ruedas == ruedas:
+            print("{} {}".format( type(v).__name__, v))
+            
+# llamada a las funciones
+print("Catatogar\n")
+catalogar(vehiculos) 
+print("============================================")
+print("\nCatatogar (Filter)\n")
+catalogar_filter(vehiculos, 2) # Llamamos a la funcion dilter y le pasamos el parametro
