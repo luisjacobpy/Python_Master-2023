@@ -10,7 +10,7 @@ from setuptools import setup
 setup(
 
     name='Mensajes', #Nombre del paquete
-    version='1.0',
+    version='2.0', # version actualizada
     description='Un paquete para saludar y dsepedir',
     author='Luis Jacobo Hernandez',
     author_email='caphumleon@gmail.com',
