@@ -12,5 +12,5 @@ Dentro de est
 ### Zonas horarias
 Vamos a utilizar un modulo que necesitamos instalar
 ```BAsh
-piip3 install pytz
+piip3 install pytz.
 ```
